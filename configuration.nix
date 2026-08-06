@@ -10,6 +10,7 @@
 	./hardware-configuration.nix
 	./modules/packages.nix	
 	./modules/niri.nix
+	./modules/audio.nix
     ];
 
   # Bootloader.
@@ -17,11 +18,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 	
 	
-  #sound
-  services.pipewire = {
-   enable = true;
-   pulse.enable = true;
-};
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
