@@ -14,8 +14,8 @@
     userName = "1udd3";
     userEmail = "ludvig@andrae.se";
 
-    extraConfig = {
-      init.defaultBranch = "main";
     };
+
+    init.defaultBranch = "main";
   };
 }
