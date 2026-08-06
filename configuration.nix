@@ -9,14 +9,13 @@
     [ # Include the results of the hardware scan.
 	./hardware-configuration.nix
 	./modules/packages.nix	
+	./modules/niri.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 	
-  #wm
-  programs.niri.enable = true;
 	
   #sound
   services.pipewire = {
