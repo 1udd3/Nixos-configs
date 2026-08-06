@@ -10,12 +10,15 @@
 
   programs.git = {
     enable = true;
-
-    userName = "1udd3";
-    userEmail = "ludvig@andrae.se";
+    settings = {
+       user = {
+       
+    	name = "1udd3";
+    	email = "ludvig@andrae.se";
 
     };
 
     init.defaultBranch = "main";
   };
+};
 }
