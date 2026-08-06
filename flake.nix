@@ -25,6 +25,14 @@
 			modules = [
 			
 				./configuration.nix				
+				
+				home-manager.nixosModules.home-manager 
+				{
+					home-manager.users.ludvig =
+						import ./home/ludvig.nix;
+				
+				}
+
 			];
 		};
 	};
