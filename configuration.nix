@@ -11,6 +11,7 @@
 	./modules/packages.nix	
 	./modules/niri.nix
 	./modules/audio.nix
+	./modules/users.nix
     ];
 
   # Bootloader.
@@ -60,13 +61,6 @@
   # Configure console keymap
   console.keyMap = "sv-latin1";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."ludvig" = {
-    isNormalUser = true;
-    description = "ludvig";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
