@@ -9,5 +9,6 @@
 	bat
 	fastfetch
 	tree
+	swaybg
   ];
 }
