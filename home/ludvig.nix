@@ -4,6 +4,8 @@
   imports = [
     ./bash.nix
     ./scripts/gnr.nix
+    ./programs/niri.nix
+    ./programs/git.nix
   ];
 
   home.username = "ludvig";
@@ -13,16 +15,5 @@
 
   programs.home-manager.enable = true;
 
-  programs.git = {
-    enable = true;
 
-    settings = {
-      user = {
-        name = "1udd3";
-        email = "ludvig@andrae.se";
-      };
-
-      init.defaultBranch = "main";
-    };
-  };
 }
