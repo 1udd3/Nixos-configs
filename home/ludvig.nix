@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+imports = [
+	./bash.nix
+];
+
 {
   home.username = "ludvig";
   home.homeDirectory = "/home/ludvig";
