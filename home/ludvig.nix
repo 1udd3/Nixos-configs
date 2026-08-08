@@ -6,6 +6,7 @@
     ./scripts/gnr.nix
     ./programs/niri.nix
     ./programs/git.nix
+    ./programs/alacritty.nix
   ];
 
   home.username = "ludvig";
