@@ -7,7 +7,7 @@
     shellAliases = {
       ll = "ls -lah";
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw";
-      gnr = "~/skripts/gnr.sh"
+      gnr = "~/skripts/gnr.sh";
     };
   };
 }
