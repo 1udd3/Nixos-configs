@@ -18,5 +18,6 @@
     binds."Mod+B" = {
       spawn = [ "firefox" ];
     };
+    
   };
 }
