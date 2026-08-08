@@ -7,5 +7,6 @@
 	alacritty
 	firefox
 	bat
+	fastfetch
   ];
 }
