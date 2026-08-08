@@ -9,13 +9,14 @@
 
       set -e
 
+      cd /etc/nixos
+
       git add .
 
       sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw
 
       dir=$(pwd)
 
-      cd /etc/nixos
 
 
       git commit -m "$1"
