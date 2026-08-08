@@ -3,6 +3,7 @@
 {
   imports = [
     ./bash.nix
+    ./scripts/gnr.nix
   ];
 
   home.username = "ludvig";
