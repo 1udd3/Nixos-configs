@@ -1,10 +1,9 @@
 { config, pkgs, ... }:
 
 {
-
-imports = [
-	./bash.nix
-];
+  imports = [
+    ./bash.nix
+  ];
 
   home.username = "ludvig";
   home.homeDirectory = "/home/ludvig";
@@ -15,15 +14,14 @@ imports = [
 
   programs.git = {
     enable = true;
+
     settings = {
-       user = {
-       
-    	name = "1udd3";
-    	email = "ludvig@andrae.se";
+      user = {
+        name = "1udd3";
+        email = "ludvig@andrae.se";
+      };
 
+      init.defaultBranch = "main";
     };
-
-    init.defaultBranch = "main";
   };
-};
 }
