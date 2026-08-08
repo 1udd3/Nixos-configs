@@ -8,5 +8,6 @@
 	firefox
 	bat
 	fastfetch
+	tree
   ];
 }
