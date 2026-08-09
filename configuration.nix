@@ -12,6 +12,7 @@
 	./modules/niri.nix
 	./modules/audio.nix
 	./modules/users.nix
+	./modules/fonts.nix
     ];
 
   # Bootloader.
