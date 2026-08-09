@@ -1,26 +1,31 @@
+{ config, ... }:
+
 {
-	programs.alacritty = {
-		enable = true;
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      general = {
+        import = [
+          "${config.xdg.configHome}/alacritty/colors.toml"
+        ];
+      };
 
-		settings = {
-			window = {
-				
-				decorations = "None";
-				opacity = 0.85;
-				padding ={
-					x=10;
-					y=10;
-				};
+      font = {
+        normal = {
+          family = "JetBrainsMono Nerd Font";
+          style = "Regular";
+        };
+        size = 11;
+      };
 
-
-			};
-
-		};
-
-
-	};
-
-
-
-
+      window = {
+        opacity = 0.9;
+	decorations = "None";
+        padding = {
+          x = 10;
+          y = 10;
+        };
+      };
+    };
+  };
 }

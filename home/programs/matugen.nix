@@ -1,9 +1,7 @@
 { pkgs, config, ... }:
 
 {
-  home.packages = [
-    pkgs.matugen
-  ];
+  home.packages = [ pkgs.matugen ];
 
   xdg.configFile."matugen/config.toml".text = ''
     [config]
@@ -22,5 +20,9 @@
     [templates.fuzzel]
     input_path = "${../configs/matugen/fuzzel.ini}"
     output_path = "${config.xdg.configHome}/fuzzel/colors.ini"
+
+    [templates.alacritty]
+    input_path = "${../configs/matugen/alacritty.toml}"
+    output_path = "${config.xdg.configHome}/alacritty/colors.toml"
   '';
 }
