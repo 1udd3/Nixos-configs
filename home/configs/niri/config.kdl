@@ -1,9 +1,9 @@
-// This config is in the KDL format: https://kdl.dev
+include "colors.kdl"
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://niri-wm.github.io/niri/Configuration:-Introduction
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-i" "/home/ludvig/pictures/wallpapers/clouds-blue.png" "-m" "fill"
+spawn-at-startup "awww-daemon"
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Input
@@ -11,8 +11,7 @@ input {
     keyboard {
         xkb {
             // You can set rules, model, layout, variant and options.
-            // For more information, see xkeyboard-config(7).
-            // For example:
+            // For more information, see xkeyboard-config(7). For example:
              layout "se"
              options "caps:escape"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
@@ -25,7 +24,6 @@ input {
         // Enable numlock on startup, omitting this setting disables it.
         numlock
     }
-
     // Next sections include libinput settings.
     // Omitting settings disables them, or leaves them at their default values.
     // All commented-out settings here are examples, not defaults.
@@ -116,7 +114,7 @@ output "HDMI-A-1" {
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Layout
-layout {
+/-layout {
     // Set gaps around windows in logical pixels.
     gaps 16
 
@@ -162,7 +160,7 @@ layout {
     // `draw-border-with-background`.
 
     // You can change how the focus ring looks.
-    focus-ring {
+    /-focus-ring {
         // Uncomment this line to disable the focus ring.
         // off
 
@@ -176,13 +174,11 @@ layout {
 
         // Color of the ring on the active monitor.
 
-	active-color "#5D3FD3"
 
         // Color of the ring on inactive monitors.
         //
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
-        inactive-color "#505050"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -191,7 +187,6 @@ layout {
         // You can use any CSS linear-gradient tool on the web to set these up.
         // Changing the color space is also supported, check the wiki for more info.
         //
-        active-gradient from="#5D3FD3" to="#CF9FFF" angle=45
 
         // You can also color the gradient relative to the entire view
         // of the workspace, rather than relative to just the window itself.
@@ -201,7 +196,7 @@ layout {
     }
 
     // You can also add a border. It's similar to the focus ring, but always visible.
-    border {
+    /-border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
         off

@@ -9,7 +9,6 @@
 	bat
 	fastfetch
 	tree
-	swaybg
 	waybar
 	fuzzel
 	btop

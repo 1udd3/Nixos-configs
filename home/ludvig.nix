@@ -9,6 +9,8 @@
     ./programs/alacritty.nix
     ./programs/waybar.nix
     ./programs/matugen.nix
+    ./programs/fuzzel.nix
+    ./scripts/theme-switch.nix
   ];
 
   home.username = "ludvig";

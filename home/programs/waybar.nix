@@ -1,4 +1,4 @@
-{ ... }:
+{ config,  ... }:
 
 {
   programs.waybar = {
@@ -88,8 +88,7 @@
       };
     };
 	style = ''
-  @import "colors.css";
-
+	@import url("${config.xdg.configHome}/waybar/colors.css");
   * {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 13px;
