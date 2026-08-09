@@ -10,5 +10,7 @@
 	fastfetch
 	tree
 	swaybg
+	waybar
+	fuzzel
   ];
 }
