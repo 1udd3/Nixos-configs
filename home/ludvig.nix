@@ -7,6 +7,7 @@
     ./programs/niri.nix
     ./programs/git.nix
     ./programs/alacritty.nix
+    ./programs/waybar.nix
   ];
 
   home.username = "ludvig";

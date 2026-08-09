@@ -12,5 +12,6 @@
 	swaybg
 	waybar
 	fuzzel
+	btop
   ];
 }
