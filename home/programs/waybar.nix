@@ -87,65 +87,75 @@
         };
       };
     };
+	style = ''
+  @import "colors.css";
 
-    style = ''
-      * {
-        font-family: "JetBrainsMono Nerd Font";
-        font-size: 13px;
-        font-weight: bold;
-        border: none;
-        min-height: 0;
-      }
+  * {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    min-height: 0;
+  }
 
-      window#waybar {
-        background: rgba(30, 30, 46, 0.85);
-        color: #cdd6f4;
-        border-radius: 12px;
-      }
+  window#waybar {
+    background: alpha(@background, 0.85);
+    color: @foreground;
+    border-radius: 12px;
+  }
 
-      #workspaces button {
-        padding: 0 5px;
-        font-size: 18px;
-      }
+  #workspaces button {
+    padding: 0 5px;
+    font-size: 18px;
+    color: @foreground;
+  }
 
-      #workspaces button.focused {
-        color: #89b4fa;
-      }
+  #workspaces button.focused {
+    color: @primary;
+  }
 
-      #clock,
-      #cpu,
-      #memory,
-      #temperature,
-      #pulseaudio,
-      #tray {
-        background: rgba(49, 50, 68, 0.8);
-        padding: 0 12px;
-        margin: 4px;
-        border-radius: 10px;
-      }
+  #clock,
+  #cpu,
+  #memory,
+  #temperature,
+  #pulseaudio,
+  #tray {
+    background: alpha(@background-alt, 0.8);
+    padding: 0 12px;
+    margin: 4px;
+    border-radius: 10px;
+  }
 
-      #clock {
-        color: #f9e2af;
-      }
+  #clock {
+    color: @tertiary;
+  }
 
-      #pulseaudio {
-        color: #a6e3a1;
-      }
+  #pulseaudio {
+    color: @secondary;
+  }
 
-      #cpu {
-        color: #89b4fa;
-      }
+  #cpu {
+    color: @primary;
+  }
 
-      #memory {
-        color: #cba6f7;
-      }
+  #memory {
+    color: @secondary;
+  }
 
-      tooltip {
-        background: #1e1e2e;
-        color: #cdd6f4;
-        border-radius: 8px;
-      }
-    '';
+  #temperature {
+    color: @tertiary;
+  }
+
+  #tray {
+    color: @foreground;
+  }
+
+  tooltip {
+    background: @background;
+    color: @foreground;
+    border-radius: 8px;
+  }
+'';
   };
 }
 

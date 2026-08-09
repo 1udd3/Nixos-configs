@@ -8,6 +8,7 @@
     ./programs/git.nix
     ./programs/alacritty.nix
     ./programs/waybar.nix
+    ./programs/matugen.nix
   ];
 
   home.username = "ludvig";
