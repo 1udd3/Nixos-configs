@@ -24,5 +24,9 @@
     [templates.alacritty]
     input_path = "${../configs/matugen/alacritty.toml}"
     output_path = "${config.xdg.configHome}/alacritty/colors.toml"
+
+    [templates.btop]     
+    input_path = "${../configs/matugen/btop.theme}"	
+    output_path = "${config.xdg.configHome}/btop/themes/matugen.theme"
   '';
 }
