@@ -21,4 +21,14 @@
   programs.home-manager.enable = true;
 
 
+    home.pointerCursor = {
+	enable = true;
+	gtk.enable = true;
+	x11.enable = true;
+	package = pkgs.bibata-cursors;
+	name = "Bibata-Modern-Classic";
+	size = 24; # Du kan ändra storlek här (t.ex. 24, 32, 48)
+	};
+
+
 }
