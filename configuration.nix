@@ -10,7 +10,7 @@
 	./hardware-configuration.nix
 	./modules/packages.nix	
 	./modules/niri.nix
-	./modules/audio.nix
+	./modules/port.nix
 	./modules/users.nix
 	./modules/fonts.nix
     ];
