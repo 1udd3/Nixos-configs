@@ -12,5 +12,6 @@
 	waybar
 	fuzzel
 	btop
+	localsend
   ];
 }
