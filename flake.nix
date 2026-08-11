@@ -1,39 +1,62 @@
 {
-	description = "My NixOS config";
+  description = "NixOS Multi-host Flake";
 
-	inputs = { 
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+    nixosConfigurations = {
 
-		home-manager = {
-			
-			url = "github:nix-community/home-manager";
+      "desktop" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/desktop/configuration.nix
 
+          ./modules/audio.nix
+          ./modules/fonts.nix
+          ./modules/niri.nix
+          ./modules/packages.nix
+          ./modules/users.nix
+	  ./modules/common.nix
 
-			inputs.nixpkgs.follows = "nixpkgs";
+	  ./modules/gaming.nix
+	  ./modules/port.nix
 
-		};
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.ludvig = import ./home/ludvig.nix;
+          }
+        ];
+      };
 
-	};
+      "laptop" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/laptop/configuration.nix
 
-	outputs = { self, nixpkgs, home-manager }: {
+          ./modules/audio.nix
+          ./modules/fonts.nix
+          ./modules/niri.nix
+          ./modules/packages.nix
+          ./modules/users.nix
+	  ./modules/common.nix
 
-		nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.ludvig = import ./home/ludvig.nix;
+          }
+        ];
+      };
 
-			system = "x86_64-linux";
-
-			modules = [
-			
-				./configuration.nix				
-				
-				home-manager.nixosModules.home-manager 
-				{
-					home-manager.users.ludvig =
-						import ./home/ludvig.nix;
-				
-				}
-
-			];
-		};
-	};
+    };
+  };
 }
