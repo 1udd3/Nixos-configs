@@ -29,7 +29,6 @@ input {
     // Omitting settings disables them, or leaves them at their default values.
     // All commented-out settings here are examples, not defaults.
     touchpad {
-         off
         tap
         // dwt
         // dwtp
@@ -55,7 +54,6 @@ input {
 
     trackpoint {
 
-        off
         // natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
