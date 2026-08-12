@@ -32,7 +32,9 @@
   };
   console.keyMap = "sv-latin1";
 
+
   # Nix-inställningar
+
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }

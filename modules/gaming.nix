@@ -12,6 +12,10 @@
 		enable32Bit = true;
 	};
 
+	boot.kernelParams = [
+	"amdgpu.ppfeaturemask=0xffffffff"
+	];
+
 	boot.initrd.kernelModules = [ "amdgpu" ];
 
 	services.xserver.videoDrivers = [ "amdgpu" ];
