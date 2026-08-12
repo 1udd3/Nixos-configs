@@ -5,6 +5,7 @@
 		steam
 		xwayland-satellite
 		xrandr
+		prismlauncher
 	];
 	hardware.graphics = {
 		enable = true;

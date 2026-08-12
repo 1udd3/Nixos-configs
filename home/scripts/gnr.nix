@@ -15,7 +15,7 @@
 
       git add .
 
-      sudo nixos-rebuild switch --flake /etc/nixos#"$host" &> /dev/null
+      sudo nixos-rebuild switch --flake /etc/nixos#"$host" 
 
       dir=$(pwd)
 
