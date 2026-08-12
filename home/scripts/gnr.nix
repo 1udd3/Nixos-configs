@@ -11,9 +11,11 @@
 
       cd /etc/nixos
 
+      host=$(hostname)
+
       git add .
 
-      sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw
+      sudo nixos-rebuild switch --flake /etc/nixos#"$host"
 
       dir=$(pwd)
 

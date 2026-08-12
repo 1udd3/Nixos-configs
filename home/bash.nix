@@ -6,7 +6,7 @@
 
     shellAliases = {
       ll = "ls -lah";
-      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw";
+      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#desktop";
     };
   };
 
