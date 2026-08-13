@@ -15,5 +15,6 @@
 	localsend
 	cbonsai
 	imv
+	vscode
   ];
 }
