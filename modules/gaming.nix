@@ -6,6 +6,7 @@
 		xwayland-satellite
 		xrandr
 		prismlauncher
+		gamescope
 	];
 	hardware.graphics = {
 		enable = true;
@@ -14,6 +15,7 @@
 
 	boot.kernelParams = [
 	"amdgpu.ppfeaturemask=0xffffffff"
+	"amdgpu.dcdebugmask=0x400"
 	];
 
 	boot.initrd.kernelModules = [ "amdgpu" ];

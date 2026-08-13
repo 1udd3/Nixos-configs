@@ -13,5 +13,7 @@
 	fuzzel
 	btop
 	localsend
+	cbonsai
+	imv
   ];
 }

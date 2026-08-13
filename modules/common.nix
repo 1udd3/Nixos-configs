@@ -31,6 +31,10 @@
     variant = "";
   };
   console.keyMap = "sv-latin1";
+  
+  environment.sessionVariables = {
+  NIRI_DISABLE_DIRECT_SCANOUT = "1";
+};
 
 
   # Nix-inställningar

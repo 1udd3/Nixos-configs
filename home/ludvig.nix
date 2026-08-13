@@ -11,6 +11,9 @@
     ./programs/matugen.nix
     ./programs/fuzzel.nix
     ./scripts/theme-switch.nix
+    ./programs/btop.nix
+    ./programs/fastfetch.nix
+
   ];
 
   home.username = "ludvig";
