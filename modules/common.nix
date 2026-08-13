@@ -4,7 +4,6 @@
   # Bootloader (om båda kör systemd-boot)
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Nätverk & Xwayland
   networking.networkmanager.enable = true;
@@ -32,9 +31,6 @@
   };
   console.keyMap = "sv-latin1";
   
-  environment.sessionVariables = {
-  NIRI_DISABLE_DIRECT_SCANOUT = "1";
-};
 
 
   # Nix-inställningar
