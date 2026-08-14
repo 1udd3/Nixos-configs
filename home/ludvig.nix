@@ -13,6 +13,8 @@
     ./scripts/theme-switch.nix
     ./programs/btop.nix
     ./programs/fastfetch.nix
+    ./scripts/rebuild.nix
+    ./scripts/i.nix
 
   ];
 

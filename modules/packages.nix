@@ -16,5 +16,6 @@
 	cbonsai
 	imv
 	vscode
+        brightnessctl
   ];
 }
