@@ -15,8 +15,6 @@
 
 	boot.kernelParams = [
 	"amdgpu.ppfeaturemask=0xffffffff"
-	"amdgpu.dcdebugmask=0x400"
-	"amdgpu.sg_display=0"
 	];
 
 

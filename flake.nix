@@ -23,9 +23,9 @@
           ./modules/packages.nix
           ./modules/users.nix
 	  ./modules/common.nix
+	  ./modules/nix.nix
 
 	  ./modules/gaming.nix
-	  ./modules/port.nix
 
           home-manager.nixosModules.home-manager
           {
@@ -47,6 +47,7 @@
           ./modules/packages.nix
           ./modules/users.nix
 	  ./modules/common.nix
+	  ./modules/nix.nix
 
           home-manager.nixosModules.home-manager
           {
