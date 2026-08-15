@@ -15,7 +15,6 @@
 	localsend
 	cbonsai
 	imv
-	vscode
         brightnessctl
   ];
 }

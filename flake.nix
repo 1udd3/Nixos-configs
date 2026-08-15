@@ -58,6 +58,29 @@
         ];
       };
 
+      "school" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/school/configuration.nix
+
+          ./modules/audio.nix
+          ./modules/fonts.nix
+          ./modules/niri.nix
+          ./modules/packages.nix
+          ./modules/users.nix
+	  ./modules/common.nix
+	  ./modules/nix.nix
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.ludvig = import ./home/ludvig.nix;
+          }
+        ];
+      };
+
+
     };
   };
 }
